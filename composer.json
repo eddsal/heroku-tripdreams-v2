@@ -45,7 +45,6 @@
         "twig/twig": "^2.12|^3.0",
         "vich/uploader-bundle": "^1.16",
         "doctrine/doctrine-fixtures-bundle": "^3.4"
-
     },
     "require-dev": {
         "symfony/browser-kit": "^5.1",

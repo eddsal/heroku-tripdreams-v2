@@ -577,6 +577,9 @@
     <service id="App\DataFixtures\AdresseFixtures" class="App\DataFixtures\AdresseFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
+    <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
     <service id="App\DataFixtures\AvisFixtures" class="App\DataFixtures\AvisFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -5818,6 +5821,10 @@
             <argument key="groups" type="collection"/>
           </argument>
           <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+          <argument type="collection">
             <argument key="fixture" type="service" id="App\DataFixtures\AvisFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
@@ -6247,6 +6254,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\ActivityFixtures" class="App\DataFixtures\ActivityFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AdresseFixtures" class="App\DataFixtures\AdresseFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AdresseFixtures" class="App\DataFixtures\AdresseFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AvisFixtures" class="App\DataFixtures\AvisFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AvisFixtures" class="App\DataFixtures\AvisFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\InfoPratiqueFixtures" class="App\DataFixtures\InfoPratiqueFixtures" autowire="true" abstract="true"/>
